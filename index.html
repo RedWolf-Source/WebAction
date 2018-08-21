@@ -1,0 +1,62 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Тестовое задание для Веб Экшн</title>
+	<style type="text/css">
+	#circle{
+ 		width: 400px;
+		height: 400px;
+    	}
+    #quarter{
+    	width: 200px;
+    	height: 200px;
+    }
+	</style>
+
+</head>
+
+<body>
+<img src="source/circle.png">
+<img src="source/quarter.png">
+<canvas id="circle" width="400px" height="400px"></canvas>
+
+<script>
+	//first element - circle
+      var canvas = document.getElementById('circle');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 70;
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = '#6487c1';
+      context.fill();
+      context.stroke();
+</script>
+
+<canvas id="quarter" width="200px" height="200px"></canvas>
+
+<script type="text/javascript">
+	// second element - quarter
+	var canvas = document.getElementById('quarter');
+    var context = canvas.getContext('2d');
+    var centerX = canvas.width / 2;
+    var centerY = canvas.height / 2;
+    var radius = 70;
+    var startingAngle = -0,5 * Math.PI; //start angle
+	var endingAngle = 0;// end angle
+
+    context.beginPath();
+    context.arc(centerX, centerY, radius, 0, -0.5 * Math.PI, false);
+    context.fillStyle = '#6487c1';
+    context.fill();
+    context.stroke();
+</script>
+
+<!--Еще должны быть элементы:
+	2 бегунка
+	Координаты
+	Зона текста (лог)
+-->
+</body>
+</html>
